@@ -1,8 +1,8 @@
-package pkg.loops;
+package pkg.statements;
 
 import java.util.Scanner;
 
-public class Problem {
+public class Problem_5_1 {
     public static void main(String[] args){
         Scanner scanner =  new Scanner(System.in);
 

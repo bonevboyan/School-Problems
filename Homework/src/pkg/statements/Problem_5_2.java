@@ -14,10 +14,9 @@ public class Problem_5_2 {
         List<Integer> nums = Arrays.asList(scanner.nextLine().split("(?!^)")).stream()
             .map(x->Integer.parseInt(x)).collect(Collectors.toList());
 
-        int lastNum = IntStream.range(0, nums.size()).mapToObj(index -> {
-            Integer value = nums.get(index);
-            return nums.get(index) * (index + 1);
-        }).collect(Collectors.toList()).stream().mapToInt(Integer::intValue).sum() % 11;
+        int lastNum = IntStream.range(0, nums.size())
+                .mapToObj(index -> nums.get(index) * (index + 1))
+                .collect(Collectors.toList()).stream().mapToInt(Integer::intValue).sum() % 11;
 
         System.out.printf("The ISBN-10 number is %s%s",
             String.join("", nums.stream().map(Object::toString).collect(Collectors.toList())),

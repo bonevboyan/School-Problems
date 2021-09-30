@@ -7,36 +7,51 @@ public class Problem_5_3 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("First rectangle upper left x:");
-        int firstX1 = scanner.nextInt();
+        double firstX1 = scanner.nextDouble();
 
         System.out.println("First rectangle upper left y:");
-        int firstY1 = scanner.nextInt();
+        double firstY1 = scanner.nextDouble();
 
         System.out.println("First rectangle down right x:");
-        int firstX2 = scanner.nextInt();
+        double firstX2 = scanner.nextDouble();
 
         System.out.println("First rectangle down right y:");
-        int firstY2 = scanner.nextInt();
+        double firstY2 = scanner.nextDouble();
 
         System.out.println("Second rectangle upper left x:");
-        int secondX1 = scanner.nextInt();
+        double secondX1 = scanner.nextDouble();
 
         System.out.println("Second rectangle upper left y:");
-        int secondY1 = scanner.nextInt();
+        double secondY1 = scanner.nextDouble();
 
         System.out.println("Second rectangle down right x:");
-        int secondX2 = scanner.nextInt();
+        double secondX2 = scanner.nextDouble();
 
         System.out.println("Second rectangle down right y:");
-        int secondY2 = scanner.nextInt();
+        double secondY2 = scanner.nextDouble();
 
-        System.out.println(checkIfContained(firstX1, firstX2,firstY1, firstY2, secondX1, secondX2, secondY1, secondY2));
+        Rectangle rect1 = new Rectangle(firstX1, firstY1, firstX2, firstY2);
+
+        Rectangle rect2 = new Rectangle(secondX1, secondY1, secondX2, secondY2);
+
+        if (contains(rect1, rect2)) {
+            System.out.println("Second rectangle is contained in first rectangle");
+        } else if (contains(rect2, rect1)){
+            System.out.println("First rectangle is contained in second rectangle");
+        } else {
+            System.out.println("Neither of the rectangles is contained in the other");
+        }
 
     }
-    public static boolean checkIfContained(int firstX1, int firstX2, int firstY1, int firstY2, int secondX1, int secondX2, int secondY1, int secondY2) {
-        if(firstX1 <= secondX1 && firstY1 >= secondY1 && firstX2 >= secondX2 && firstY2 <= secondY2){
+    public static boolean contains(Rectangle rect1, Rectangle rect2)
+    {
+        if ((rect2.coordinate.x + rect2.width) < (rect1.coordinate.x+rect1.width) &&
+            (rect2.coordinate.x) > (rect1.coordinate.x) &&
+            (rect2.coordinate.y) < (rect1.coordinate.y) &&
+            (rect2.coordinate.y+rect2.height) < (rect1.coordinate.y+rect1.height)){
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 }

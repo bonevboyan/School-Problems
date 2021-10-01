@@ -1,5 +1,7 @@
 package pkg.statements;
 
+import pkg.statements.rectangle.Rectangle;
+
 import java.util.Scanner;
 
 public class Problem_5_3 {

@@ -1,8 +1,26 @@
 package pkg.statements;
 
-import pkg.statements.rectangle.Rectangle;
-
 import java.util.Scanner;
+
+class Coordinate {
+    public double x, y;
+    public Coordinate(double a, double b){
+        x = a;
+        y = b;
+    }
+}
+
+class Rectangle {
+    public Coordinate coordinate;
+    public double width, height;
+    public Rectangle (double a,double b,double c,double d)
+    {
+        coordinate = new Coordinate(a, b);
+        height = c - a;
+        width = b - d;
+    }
+}
+
 
 public class Problem_5_3 {
     public static void main(String[] args){
@@ -47,13 +65,9 @@ public class Problem_5_3 {
     }
     public static boolean contains(Rectangle rect1, Rectangle rect2)
     {
-        if ((rect2.coordinate.x + rect2.width) < (rect1.coordinate.x+rect1.width) &&
-            (rect2.coordinate.x) > (rect1.coordinate.x) &&
-            (rect2.coordinate.y) < (rect1.coordinate.y) &&
-            (rect2.coordinate.y+rect2.height) < (rect1.coordinate.y+rect1.height)){
-            return true;
-        } else {
-            return false;
-        }
+        return (rect2.coordinate.x + rect2.width) < (rect1.coordinate.x + rect1.width) &&
+                (rect2.coordinate.x) > (rect1.coordinate.x) &&
+                (rect2.coordinate.y) < (rect1.coordinate.y) &&
+                (rect2.coordinate.y + rect2.height) < (rect1.coordinate.y + rect1.height);
     }
 }

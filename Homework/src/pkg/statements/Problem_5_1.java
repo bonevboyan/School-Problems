@@ -16,9 +16,7 @@ public class Problem_5_1 {
         double area = length * width + height * length * 2 + height * width * 2;
 
         int bigBuckets = (int) area / 140;
-
         double paintLeft = area % 140;
-
         int smallBuckets = (paintLeft % 30 == 0 ? (int) paintLeft / 30 : (int)  paintLeft / 30 + 1);
 
         bigBuckets += (smallBuckets >= 4) ? 1 : 0;

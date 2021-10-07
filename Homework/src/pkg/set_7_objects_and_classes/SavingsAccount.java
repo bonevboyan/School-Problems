@@ -1,4 +1,4 @@
-package pkg.set_7_classes;
+package pkg.set_7_objects_and_classes;
 
 public class SavingsAccount {
     public String name;

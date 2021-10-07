@@ -1,4 +1,4 @@
-package pkg.loops;
+package pkg.set_6_loops;
 
 public class Problem_3 {
     public static void main(String[] args){

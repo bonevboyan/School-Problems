@@ -1,6 +1,4 @@
-package pkg.loops;
-
-import java.util.Scanner;
+package pkg.set_6_loops;
 
 public class Problem_1 {
     public static void main(String[] args){

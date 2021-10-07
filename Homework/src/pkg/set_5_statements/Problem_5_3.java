@@ -1,4 +1,4 @@
-package pkg.statements;
+package pkg.set_5_statements;
 
 import java.util.Scanner;
 

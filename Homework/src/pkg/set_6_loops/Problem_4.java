@@ -1,4 +1,4 @@
-package pkg.loops;
+package pkg.set_6_loops;
 
 import java.util.Arrays;
 import java.util.Scanner;

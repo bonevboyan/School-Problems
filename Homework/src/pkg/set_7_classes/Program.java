@@ -1,4 +1,4 @@
-package pkg.classes;
+package pkg.set_7_classes;
 
 public class Program {
     public static void main(String[] args){

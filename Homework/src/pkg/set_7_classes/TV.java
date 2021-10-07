@@ -1,4 +1,4 @@
-package pkg.classes;
+package pkg.set_7_classes;
 
 public class TV {
     private final int CHANNEL_LIMIT = 120;

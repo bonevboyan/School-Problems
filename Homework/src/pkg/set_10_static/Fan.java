@@ -14,6 +14,13 @@ public class Fan {
 
     }
 
+    public Fan(int speed, boolean switchedOn, double radius, String color) {
+        this.speed = speed;
+        this.switchedOn = switchedOn;
+        this.radius = radius;
+        this.color = color;
+    }
+
     public int getSpeed() {
         return speed;
     }
@@ -48,9 +55,8 @@ public class Fan {
 
     public String toString () {
         if (switchedOn) {
-            return String.format("Speed: %f\nColor: %s\nRadius: %.2f\n");
-        } else {
-            return String.format("Fan is off\nColor: %s\nRadius: %.2f\n");
+            return String.format("Speed: %s\nColor: %s\nRadius: %.2f", speed, color, radius);
         }
+        return String.format("Fan is off\nColor: %s\nRadius: %.2f", color, radius);
     }
 }

@@ -1,4 +1,4 @@
-package pkg.set_8_objects_and_memory;
+package pkg.set_08_objects_and_memory;
 
 public class Student {
     private String name;

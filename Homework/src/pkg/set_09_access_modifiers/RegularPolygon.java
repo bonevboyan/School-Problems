@@ -1,4 +1,4 @@
-package pkg.set_9_access_modifiers;
+package pkg.set_09_access_modifiers;
 
 public class RegularPolygon {
     private int n = 3;

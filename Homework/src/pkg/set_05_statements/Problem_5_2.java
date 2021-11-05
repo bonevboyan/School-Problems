@@ -1,4 +1,4 @@
-package pkg.set_5_statements;
+package pkg.set_05_statements;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,13 +1,21 @@
 package pkg.set_12_exercises;
 
 public class Program {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        testLocation();
+    }
+
+    public static void testLocation() throws Exception {
+        Location location = Location.locateLargest(new double[][]{{1, 2, 3},{5, 10, 16},{ 7, 8, 8}});
+
+        System.out.println(location.toString());
+    }
+
+    public static void testStopWatch() {
         int[] arr = initializeArray(10000);
 
         StopWatch sw = new StopWatch();
-
         sort(arr);
-
         sw.stop();
 
         System.out.println(sw.getElapsedTime());

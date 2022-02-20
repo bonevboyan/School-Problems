@@ -1,4 +1,4 @@
-package term_2.set_03_complex_numbers;
+package term_2.set_04_complex_numbers;
 
 public class Complex implements Comparable<Complex>, Cloneable {
     private double a;

@@ -1,4 +1,4 @@
-package term_2.set_05_recursion;
+package term_2.set_07_fractals;
 
 import java.util.Scanner;
 

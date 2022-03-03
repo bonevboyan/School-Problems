@@ -8,7 +8,7 @@ public class Problem_2 {
     public static void main(String[] args) throws Exception {
         QueueOfIntegers queue = new QueueOfIntegers();
 
-        IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList()).forEach(queue::enqueue);
+        IntStream.rangeClosed(1, 20).boxed().collect(Collectors.toList()).forEach(queue::enqueue);
 
         while (!queue.isEmpty()) {
             System.out.println(queue.dequeue());

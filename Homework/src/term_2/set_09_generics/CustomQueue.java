@@ -17,28 +17,15 @@ public class CustomQueue<E> {
         return queue.size() == 0;
     }
 
-    private void resize(int capacity) {
-        this.capacity = capacity;
-
-        ArrayList<E> copy = new ArrayList<E>(capacity);
-
-        copy.addAll(queue);
-
-        queue = copy;
-    }
-
     public void enqueue(E item) {
-        if (queue.size() == capacity) {
-            resize(2 * queue.size());
-        }
-
         queue.add(item);
     }
 
-    public E dequeue() throws Exception {
-        if (isEmpty()) {
-            throw new Exception("Queue is empty!");
-        }
+    public E dequeue() {
         return queue.remove(0);
+    }
+
+    public E peek() {
+        return queue.get(0);
     }
 }

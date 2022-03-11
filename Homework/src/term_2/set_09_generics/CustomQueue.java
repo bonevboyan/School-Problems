@@ -3,14 +3,10 @@ package term_2.set_09_generics;
 import java.util.ArrayList;
 
 public class CustomQueue<E> {
-    private static final int INIT_CAPACITY = 8;
-
-    private ArrayList<E> queue;
-    private int capacity;
+    private final ArrayList<E> queue;
 
     public CustomQueue() {
-        capacity = INIT_CAPACITY;
-        queue = new ArrayList<E>(capacity);
+        queue = new ArrayList<>();
     }
 
     public boolean isEmpty() {

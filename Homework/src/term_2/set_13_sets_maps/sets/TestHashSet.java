@@ -16,16 +16,10 @@ public class TestHashSet {
         set.add("Paris");
 
 
-        //glk;jhfdlkjghfdlkjghjkdflgjhfdljgkhdfljkgjhdfg public public public public public public public public
-        //lkiguhfdliughfdluighfdilghfdjghfdjlg public public pu publicblic public public
-        //flk.sdjfloikdsfhjlkidsfhjlds  public public public public public public
-
-        /*
         System.out.println(set);
-         public  public public public public public public public public public public public public public public public public public
         for(String s: set) {
             System.out.print(s.toUpperCase() + " ");
-        }*/
+        }
     }
 
 }

@@ -22,6 +22,8 @@ class SortingPanel extends JPanel {
 	int currentI = -1;
 	int currentJ = -1;
 
+	boolean isChanged = true;
+
 	public SortingPanel() {
 
 	}
@@ -36,6 +38,12 @@ class SortingPanel extends JPanel {
 		}
 
 		if (stage == incrementIStage) {
+			if (!isChanged) {
+				stage = isSortedStage;
+				repaint();
+				return;
+			}
+			isChanged = false;
 			currentI++;
 			stage = incrementJStage; // Initializing stage, continue directly to next stage
 		}
@@ -48,6 +56,7 @@ class SortingPanel extends JPanel {
 			if (numberJ > numberJPlus1) {
 				numbers.set(currentJ + 1, numberJ);
 				numbers.set(currentJ, numberJPlus1);
+				isChanged = true;
 			}
 		}
 

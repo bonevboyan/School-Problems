@@ -1,8 +1,5 @@
 a
 b
-c
-c
-c
 d
 e
 f

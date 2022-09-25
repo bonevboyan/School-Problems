@@ -25,5 +25,7 @@ public class Program {
             System.out.println(shape.getArea());
             System.out.println(shape.getPerimeter());
         }
+
+        System.out.println(shapes[0].compareTo(shapes[1]));
     }
 }

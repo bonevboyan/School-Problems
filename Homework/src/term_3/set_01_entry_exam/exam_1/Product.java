@@ -1,4 +1,4 @@
-package term_3.set_01_entry_exam;
+package term_3.set_01_entry_exam.exam_1;
 
 public class Product {
     String name;

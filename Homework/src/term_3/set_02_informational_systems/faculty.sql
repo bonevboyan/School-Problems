@@ -18,8 +18,8 @@ CREATE TABLE StudentCourse
   CourseId INT,
   StartDate DATE,
   CONSTRAINT StudentCoursePk PRIMARY KEY (StudentId, CourseId),
-  CONSTRAINT FK_movie 
+  CONSTRAINT FK_Student
       FOREIGN KEY (StudentId) REFERENCES Students (Id),
-  CONSTRAINT FK_category 
+  CONSTRAINT FK_Course
       FOREIGN KEY (CourseId) REFERENCES Courses (Id)
-);
+)

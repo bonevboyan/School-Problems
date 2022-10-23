@@ -1,0 +1,41 @@
+CREATE DATABASE University
+
+CREATE TABLE Students (
+	Id INT NOT NULL PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	EGN VARCHAR(10),
+	FacultyNumber INT NOT NULL
+)
+
+CREATE TABLE Lecturers (
+	Id INT NOT NULL PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	DegreeName NVARCHAR(50) NOT NULL,
+	DegreeLevel NVARCHAR(50) NOT NULL,
+	EGN VARCHAR(10),
+)
+
+CREATE TABLE Departments (
+	Id INT NOT NULL PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	LecturerId INT FOREIGN KEY REFERENCES Lecturers(Id)
+)
+
+CREATE TABLE Courses (
+	Id INT NOT NULL PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	Description NVARCHAR(200),
+	LecturerId INT FOREIGN KEY REFERENCES Lecturers(Id)
+)
+
+CREATE TABLE StudentCourse
+(
+  StudentId INT,
+  CourseId INT,
+  StartDate DATE,
+  CONSTRAINT StudentCoursePk PRIMARY KEY (StudentId, CourseId),
+  CONSTRAINT FK_Student
+      FOREIGN KEY (StudentId) REFERENCES Students (Id),
+  CONSTRAINT FK_Course
+      FOREIGN KEY (CourseId) REFERENCES Courses (Id)
+)

@@ -1,0 +1,46 @@
+CREATE DATABASE Football
+
+CREATE TABLE Players (
+	Id INT NOT NULL PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	Birthday DATE,
+)
+
+CREATE TABLE Clubs (
+	Id INT NOT NULL PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	PrimaryColor VARCHAR(20),
+	SecondaryColor VARCHAR(20),
+	Capitan INT FOREIGN KEY REFERENCES Players(Id)
+)
+
+ALTER TABLE Players
+ADD ClubId INT FOREIGN KEY REFERENCES Clubs(Id)
+
+CREATE TABLE Fans (
+	Id INT NOT NULL PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	EGN VARCHAR(10)
+)
+
+CREATE TABLE ClubFan
+(
+  FanId INT,
+  ClubId INT,
+  CONSTRAINT ClubFanPk PRIMARY KEY (FanId, ClubId),
+  CONSTRAINT FK_FanClub
+      FOREIGN KEY (FanId) REFERENCES Fans (Id),
+  CONSTRAINT FK_ClubFan
+      FOREIGN KEY (ClubId) REFERENCES Clubs (Id)
+)
+
+CREATE TABLE PlayerFan
+(
+  FanId INT,
+  PlayerId INT,
+  CONSTRAINT PlayerFanPk PRIMARY KEY (FanId, PlayerId),
+  CONSTRAINT FK_FanPlayer 
+      FOREIGN KEY (FanId) REFERENCES Fans (Id),
+  CONSTRAINT FK_PlayerFan 
+      FOREIGN KEY (PlayerId) REFERENCES Players (Id)
+)

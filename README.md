@@ -10,4 +10,5 @@
 |  Term | Module Name                          | Term Duration |
 |----|--------------------------------------|---------------|
 | 01 | [Java OOP](https://drive.google.com/drive/folders/1nPW3CgjHxWQwbpTaZrzPxS2OFc5GSTcl)|4.5 months|
-| 02 | [Java Algorithms & Data Structures](https://drive.google.com/drive/folders/1ChLqEavGyc4JOuB3hE6JSk9b_3qKvXa_)|4.5 months|
+| 02 | [Java Algorithms & Data Structures](https://drive.google.com/drive/folders/1oG0DvRqtnBtfAtuBgAxCJMO3jGR6AN1D)|4.5 months|
+| 03 | [Databases & SQL Queries](https://drive.google.com/drive/folders/1_PgRzrlDRU_Jjh0c7LWR7GAq_XcQTLRl)|4.5 months|

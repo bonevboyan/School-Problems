@@ -38,5 +38,6 @@ WHERE pc1.model != pc2.model
 SELECT maker, COUNT(code) AS CNT
 FROM pc
 JOIN product ON product.model = pc.model
+WHERE speed > 400
 GROUP BY maker
 HAVING COUNT(code) > 2
